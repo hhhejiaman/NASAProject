@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="utf-8">
+    <title>[he]homework</title>
+    <style>
+        body{
+            background-color: black;
+        }
+        .topbox{
+            margin-top:50px;
+            margin-left:auto;
+            margin-right:auto ;
+            background-color: slategrey;
+            width: 700px;
+            height:65px;
+            position:relative;
+            border:1px solid #000;
+            float:center;
+        }
+        .box1{
+            float:left;
+            width:35px;
+        }
+        .box2{
+            position:absolute;
+            left:100px;
+            line-height: 150%;
+            margin-top: 20px;
+        }
+        .box3{
+            float:right;
+            margin-right:30px;
+        }
+        span{
+            color:white;
+            font-size:23px;
+        }
+        .leftn{
+            width:35px;
+            padding-left: 20px;
+            padding-top: 15px;
+            padding-bottom:10px;
+        }
+        .car{
+            width:35px;
+            padding-left: 20px;
+            padding-top: 15px;
+            padding-bottom:10px;
+        }
+        .bottombox{
+            margin-left:auto;
+            margin-right:auto;
+            background-image: url(ph1.jpg);
+            background-position-x: -200px;
+            background-position-y: 0px;
+            width: 700px;
+            height:400px;
+            border:1px solid #000;
+            top:-250px;
+        }
+        .lastbox{
+            margin-left:auto;
+            margin-right:auto;
+            width: 700px;
+            height:90px;
+            top:-250px;
+            background-color: white;
+        }
+        .dot{
+            float:right;
+            width: 50px;
+            margin-top: 340px;
+            margin-right:10px;
+        }
+        .btn-style{
+            display:block;
+            width:150px;
+            height:50px;
+            color:black;
+            background-color: white;
+            text-decoration:none;
+            line-height: 50px;
+            text-align: center;
+            font-size:20px;
+            border-radius: 100px;
+            border:1px solid gray;
+            margin-top: 20px;
+            margin-left:30px;
+        }
+        a:hover{
+            color:white;
+            background: lightslategray;
+        }
+        .btn1{
+            float:left;
+            width:200px;
+            margin-left:20px;
+        }
+        </style>
+        <script src="www.baidu.com"></script>
+    </head>
+    <body>
+        <div class="topbox">
+            <div class="box1">
+                <img class="leftn" src="left.png">
+            </div>
+            <div class="box2">
+                <span>《沙海》无删减版</span>
+            </div>
+            <div class="box3">
+                <img class="car" src="car.png"> 
+            </div>
+        </div>
+        <div class="bottombox">
+            <!-- <img src="ph1.jpg"> -->
+            <img class="dot" src="dot.png">
+        </div>
+        <div class="lastbox">
+            <div class="btn1">
+                <a class="btn-style" href="#">VIP 第一集</a>
+            </div>
+            <div class="btn1">
+                    <a class="btn-style" href="#">VIP 第二集</a>
+            </div>
+            <div class="btn1">
+                    <a class="btn-style" href="#">VIP 第三集</a>
+            </div>
+        </div>
+        <div class="lastbox">
+            <div class="btn1">
+                <a class="btn-style" href="#">VIP 第一集</a>
+                </div>
+            <div class="btn1">
+                <a class="btn-style" href="#">VIP 第二集</a>
+            </div>
+            <div class="btn1">
+                <a class="btn-style" href="#">VIP 第三集</a>
+            </div>
+
+        </div>
+    </body>
+    <script>
+        function fun{
+            var a=Math.random() * 5;
+            $('img')。attr('src','image' + a + '.jpg');
+        }
+    </script>
+</html>
