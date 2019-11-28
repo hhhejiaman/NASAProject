@@ -1,156 +1,91 @@
 <!DOCTYPE html>
 <html>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <head>
-        <meta charset="utf-8">
-        <title>下拉菜单</title>
-        <style>
-            *{
-                margin: 0;
-                padding: 0;
-            }
-            .select {
-                margin: 50px auto;/*居中*/
-                width: 180px;
-                text-align: center;
-            }
-            .select a {
-                color: #fff;
-                text-decoration: none;
-            }
-            .select ul,.select li {
-                list-style: none;
-            }
-            .select span {
-                line-height: 46px;
-                background-color: tomato;
-                display: block;
-                margin-bottom: 20px;
-                position: relative;
-                z-index: 2;
-                border-radius: 5px;
-                -webkit-transition: all .2s ease-in;
-                transition: all .2s ease-in;
-            }
-            .select span a:after{
-                content: " ";
-                display: inline-block;
-                width: 0;
-                height: 0;
-                font-size: 0;
-                line-height: 0;
-                border-bottom: solid 6px #fff;
-                border-left: solid 4px transparent;
-                border-right: solid 4px transparent;
-                vertical-align: 3px;
-                margin-left: 10px;
-                -webkit-transition: all .2s ease-in;
-                transition: all .2s ease-in;
-            }
-            /*给以整体的阴影和圆角 但是不能overflow*/
-            .drop {
-                left: 0;
-                right: 0;
-                top: -9999px;
-                box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.2);
-                border-radius: 5px;
-                position: absolute;
-                z-index: 1;
-                -webkit-transform: translateY(-50px);/*y轴方向平移*/
-                transform: translateY(-50px);
-                opacity: 0;
-                -webkit-transition: all .2s ease-in;/*平移时间0.2s*/
-                transition: all .2s ease-in;
-            }
-            /*给送个下拉助攻*/
-            .select:hover span{
-                background-color: tomato;
-            }
-            .select:hover span a:after{
-                -webkit-transform: rotate(180deg);/*旋转180度*/
-                transform: rotate(180deg);
-            }
-            .select:hover .drop{
-                position: static;
-                opacity: 1;
-                -webkit-transform: translateY(0);
-                transform: translateY(0);
-            }
-            /*一个很重要的三角形*/
-            .drop li:first-child:before {
-                content: " ";
-                font-size: 0;
-                line-height: 0;
-                margin: 0 auto;/*居中*/
-                display: block;/*独占一行*/
-                box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.2); /*配合整体一样的投影*/
-                background-color:tomato;
-                width: 10px;
-                height: 10px;
-                -webkit-transform: rotate(45deg); 
-                transform: rotate(45deg); /*一个正方形倾斜四十五度就是三角了但是要把下半部分藏起来*/
-                position: relative;
-                top: -5px; /*果断的露出上半部分*/
-                z-index: 1; /*果断的隐藏下半部分*/
-                -webkit-transition: all .2s ease-in;
-                transition: all .2s ease-in;
-            }
-            .drop li a {
-                color: #888;
-                line-height: 46px;
-                border-bottom: solid 1px #eee;
-                font-size: 14px;
-                display: block;
-                background-color: tomato; /*要有背景色才能盖住呀*/
-                position: relative;
-                z-index: 2; /*这里很重要 要挡住三角形的下半部分*/
-                -webkit-transition: all .2s ease-in;
-                transition: all .2s ease-in;
-            }
-            /*以下两块：控制第一个和最后一个li要圆角，因为最外边的div没有overflow 也不可以overflow*/
-            .drop li:first-child a{
-                border-top-left-radius: 5px;
-                border-top-right-radius: 5px;
-                margin-top: -10px;
-            }
-            .drop li:last-child a{
-                border-bottom-left-radius: 5px;
-                border-bottom-right-radius: 5px;
-                border-bottom: none;
-            }
-            /*hover事件给了li，先改变三角 再改变a*/
-            .drop li:hover:before{
-                background-color: tomato;
-            }
-            .drop li:hover a {
-                background-color: tomato;
-                color: #fff;
-            }
-            .heart{
-                position:absolute;        
-            }
+        <link rel="stylesheet" type="text/css" href="./APP/home/style/style.css"/>
+    <meta charset="utf-8">
+    <title>[he]homework</title>
+    <style>
+       
         </style>
     </head>
     <body>
-        <div class="select">
-            <span><a href="javascript:void(0);">鼠标浮上来</a></span>
-            <div class="drop">
-                <ul>
-                    <li>
-                        <div class="heart">
-                            <img src="pic.png">
-                        </div>
-                        <div>
-                        <a href="javascript:void(0);">下拉菜单一</a>
-                        </div>
-                    </li>
-                    <li>
-                        <a href="javascript:void(0);">下拉菜单二</a>
-                    </li>
-                    <li>
-                        <a href="javascript:void(0);">下拉菜单三</a>
-                    </li>
-                </ul>
+        <div class="topbox">
+            <div class="box1">
+                <img class="leftn" src="./APP/home/static/left.png">
+            </div>
+            <div class="box2">
+                <span>《沙海》无删减版</span>
+            </div>
+            <div class="box3">
+                <img class="car" src="./APP/home/static/car.png"> 
             </div>
         </div>
+        <div class="bottombox">
+            <!-- <img src="ph1.jpg"> -->
+            <img class="dot" src="./APP/home/static/dot.png">
+        </div>
+        <div class="lastbox">
+            <div class="btn1">
+                <a class="btn-style" href="https://www.tvmao.com/drama/IVtqX2lq/episode">VIP 第一集</a>
+            </div>
+            <div class="btn1">
+                    <a class="btn-style" href="https://www.tvmao.com/drama/IVtqX2lq/episode">VIP 第二集</a>
+            </div>
+            <div class="btn1">
+                    <a class="btn-style" href="https://www.tvmao.com/drama/IVtqX2lq/episode">VIP 第三集</a>
+            </div>
+        </div>
+        <div class="lastbox">
+            <div class="btn1">
+                <a class="btn-style" href="https://www.tvmao.com/drama/IVtqX2lq/episode">VIP 第四集</a>
+                </div>
+            <div class="btn1">
+                <a class="btn-style" href="https://www.tvmao.com/drama/IVtqX2lq/episode">VIP 第五集</a>
+            </div>
+            <div class="btn1">
+                <a class="btn-style" href="https://www.tvmao.com/drama/IVtqX2lq/episode">VIP 第六集</a>
+            </div>
+        </div>
+        <div class="lastbox2">
+            <div class="bottombox2">
+            </div>
+            <div class="bottombox3">
+                <h2>沙海</h2>
+                <h4>(2018年吴磊、秦昊主演网络剧)</h4>
+                <p>普通高考落榜生黎簇（吴磊饰）意外被袭击后被卷入一个以世界现状为目的庞大计划中。然后认识了这一切的幕后布局者，以旅行摄影作家关根身份登场的吴邪（秦昊饰），成为吴邪沙海颠覆计划的关键人，而吴邪利用九门禁地古潼京，谋划出清肃九门摧毁汪家的反击计划。吴邪已收敛起当年的天真，以他非同常人的智慧，开始向几千年前就被设定的命局宣战...</p>
+                <table>
+                    <tr>
+                        <th>
+                            <a href="https://baike.baidu.com/item/%E6%B2%99%E6%B5%B7/19708564?fr=aladdin" class="readmore">继续阅读</a>
+                        </th>
+                        <th>
+                            <p class="count"> 9511086人已观看</p>
+                        </th>
+                    </tr>
+                </table>
+            </div>
+        <hr class="line">
+        </div>
+        <div class="lastbox2">
+                <div class="bottombox4">
+                </div>
+                <div class="bottombox3">
+                    <h2>沙海伏笔全揭秘，知道这些你才算看懂了...</h2>
+                    <h4>解密古潼京，原来她才是隐藏最深的角色</h4>
+                    <p>在《藏海花》中，吴邪看到笔记上画着乌龟一样的图案，后来知道这是陨石坠落的情景，但很多人都把它和极限与终极混淆了，陨石的作用三叔曾经提到过，终极就是薛定谔的猫，就是叠加态，生与死共存，再根据藏海花里的蛇王国和黄昏草可以大概推断出，这块陨石有着两个巨大的力量。其一...</p>
+                    <table>
+                        <tr>
+                            <th>
+                                <a href="https://tieba.baidu.com/p/5314247445?red_tag=1258923326&traceid=" class="readmore">继续阅读</a>
+                            </th>
+                            <th>
+                                <p class="count"> 9409086人已观看</p>
+                            </th>
+                        </tr>
+                    </table>
+                </div>
+            <hr class="line">
+            </div>
     </body>
 </html>
